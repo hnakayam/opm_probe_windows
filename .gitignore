@@ -430,10 +430,5 @@ FodyWeavers.xsd
 
 # --- project-specific additions ---
 # Bare top-level platform output folders used by this project's .vcxproj
-x64/
-x86/
-ARM64/
-ARM/
-
-# Internal investigation notes, not for publication
-HANDOFF.md
+Debug/
+Release/
