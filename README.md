@@ -17,6 +17,10 @@ DTCP-IP/HDCP保護されたコンテンツの再生に必要なディスプレ�
 
 現時点では検証範囲は初期化ハンドシェイクの入り口(`StartInitialization`)までに絞っており、その先の鍵交換やHDCP保護レベルの実際の有効化までは検証しません。
 
+## ビルド済みバイナリ
+
+自分でビルドしなくても、[Releases](https://github.com/hnakayam/opm_probe_windows/releases) からビルド済みのzip(例: `opm_probe_windows_v0.1.0.zip`)をダウンロードして使うことができます。zipを展開すると `Release` ディレクトリの下にx64/ARM64/x86それぞれの実行ファイルが入っています。
+
 ## ビルド環境
 
 - Visual Studio 2026、「C++によるデスクトップ開発」ワークロードが必要 (Windows SDKもインストールしてください)
