@@ -107,3 +107,19 @@ PVP-OPM の DDI を実装しているかを一次判定します。
 | `StartInitialization` まで成功(証明書チェーン取得可) | ドライバはPVP-OPMの初期化ハンドシェイクの入り口を実装している |
 
 いずれのセマンティクスでも `StartInitialization` が成功すれば、そのディスプレイドライバはPVP-OPMの基本的なDDIを実装していると判断できる。
+
+## 実行結果の例: Arm版Windows(Snapdragon X Plus)での実行
+
+Snapdragon X Plus搭載のArm版Windows 11機(HP OmniBook 5 Laptop 14-he0xxx)で `opm_probe_ARM64.exe` を実行したところ、両セマンティクスとも `OPMGetVideoOutputsFromHMONITOR` の時点でエラーになった。
+
+```
+[モニター: \\.\DISPLAY1]
+  [OPM semantics]
+    OPMGetVideoOutputsFromHMONITOR: 失敗
+    HRESULT=ディスプレイ ドライバー内で予期しないエラーが発生したため、メソッドは失敗しました。 (0xC026251E)
+  [COPP semantics (後方互換モード)]
+    OPMGetVideoOutputsFromHMONITOR: 失敗
+    HRESULT=ドライバーは COPP をサポートしていません。 (0xC0262501)
+```
+
+上記の「結果の見方」表の1番目のケースに該当し、このディスプレイドライバはOPM方式・COPP方式いずれもPVP-OPMのDDIエントリポイントを実装していないと判断できる。
