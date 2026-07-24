@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="opm_probe/opm_probe.vcxproj" Id="a21ade0d-61dc-4ebf-a70f-63c6cf2d28a0" />
+</Solution>
